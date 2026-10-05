@@ -5,6 +5,8 @@ class Circle(BasicShape):
     def __init__(self, _x_center, _y_center, _radius):
         self._x_center = _x_center
         self._y_center = _y_center
+        if not isinstance(_radius, int) and not isinstance(_radius, float) or _radius <= 0:
+            raise ValueError("Radius must be a valid positive numeral")
         self._radius = _radius
         super().__init__("Circle", math.pi * _radius ** 2)
 
