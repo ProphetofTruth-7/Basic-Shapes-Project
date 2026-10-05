@@ -3,8 +3,6 @@ from abc import ABC, abstractmethod
 "The overarching class that the other shape classes will inherit from. Provides the area and name variables and their respective getters/setters for inheritance, while remaining wholly abstract"
 class BasicShape(ABC):
     def __init__(self, name, area):
-        if not isinstance(name, str) or name.strip():
-            raise ValueError("Name must be a valid string")
         self._name = name
         self._area = 0.0
 
@@ -15,7 +13,9 @@ class BasicShape(ABC):
     "The setter for the name property, able to be passed down to the Basic Shape's subclasses and forced to fit(not abstract)"
     @name.setter
     def name(self, value):
-        if not isinstance(value, str) or value.strip():
+        if not isinstance(value, str):
+            raise ValueError("Name must be a string")
+        if not value.strip():
             raise ValueError("Name must be a valid string")
         self._name = value
 
