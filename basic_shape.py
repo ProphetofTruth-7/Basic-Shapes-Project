@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+"The overarching class that the other shape classes will inherit from. Provides the area and name variables and their respective getters/setters for inheritance, while remaining wholly abstract"
 class BasicShape(ABC):
     def __init__(self, name, area):
         self._name = name
