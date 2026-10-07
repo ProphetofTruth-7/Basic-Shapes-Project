@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>1fe51063-b73a-458b-beb1-f56aad5890a5</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>tests\test_circle.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
